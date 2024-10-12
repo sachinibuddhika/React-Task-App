@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Task from './components/Task';
 
 function App() {
+
+  const tasks=[
+    {id:1,task:"Task 1"},
+    {id:2,task:"Task 2"},
+    {id:3,task:"Task 3"},
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className="app">
+    <Task a={tasks[0].task}/>
+    <Task a={tasks[1].task}/>
+    <Task a={tasks[2].task}/>
+   </div>
+  
   );
 }
 
